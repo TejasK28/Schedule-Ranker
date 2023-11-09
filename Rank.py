@@ -1,13 +1,14 @@
-import lxml
-from bs4 import BeautifulSoup
-import re
-import requests
-import selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
-#constant links
+# constant links
 CSP_LOGIN_PAGE = 'https://sims.rutgers.edu/csp/'
 
-from selenium import webdriver
+# Provide the correct path to your chromedriver executable
+service = Service('Users\\Tejas\\Downloads\\chromedriver.exe')  # Replace with the actual path
 
-driver = webdriver.Chrome()
+# Initialize the webdriver with the service
+driver = webdriver.Chrome(service=service)
 driver.get("https://www.google.com")
+
+# Rest of your code...
